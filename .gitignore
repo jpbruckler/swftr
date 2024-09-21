@@ -2,6 +2,9 @@ Archive
 Artifacts
 cov.xml
 coverage.xml
+
+.env
+
 # OS generated files #
 ######################
 .DS_Store

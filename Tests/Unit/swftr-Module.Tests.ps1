@@ -3,12 +3,12 @@ BeforeAll {
     Set-Location -Path $PSScriptRoot
     #-------------------------------------------------------------------------
     $ModuleName = 'swftr'
-    $PathToManifest = [System.IO.Path]::Combine('..', '..', $ModuleName, "$ModuleName.psd1")
-    $PathToModule = [System.IO.Path]::Combine('..', '..', $ModuleName, "$ModuleName.psm1")
+    $PathToManifest = [System.IO.Path]::Combine('..', '..', 'src', $ModuleName, "$ModuleName.psd1")
+    $PathToModule = [System.IO.Path]::Combine('..', '..', 'src', $ModuleName, "$ModuleName.psm1")
     #-------------------------------------------------------------------------
 }
 Describe 'Module Tests' -Tag Unit {
-    Context "Module Tests" {
+    Context 'Module Tests' {
         $script:manifestEval = $null
         It 'Passes Test-ModuleManifest' {
             { $script:manifestEval = Test-ModuleManifest -Path $PathToManifest } | Should -Not -Throw
@@ -20,7 +20,7 @@ Describe 'Module Tests' -Tag Unit {
         } #psm1Exists
         It 'manifest should contain swftr.psm1' {
             $PathToManifest |
-            Should -FileContentMatchExactly "swftr.psm1"
+                Should -FileContentMatchExactly 'swftr.psm1'
         } #validPSM1
         It 'should have a matching module name in the manifest' {
             $script:manifestEval.Name | Should -BeExactly $ModuleName

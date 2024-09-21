@@ -1,7 +1,7 @@
 BeforeDiscovery {
     Set-Location -Path $PSScriptRoot
     $ModuleName = 'swftr'
-    $PathToManifest = [System.IO.Path]::Combine('..', '..', '..', $ModuleName, "$ModuleName.psd1")
+    $PathToManifest = [System.IO.Path]::Combine('..', '..', '..', 'src', $ModuleName, "$ModuleName.psd1")
     #if the module is already in memory, remove it
     Get-Module $ModuleName -ErrorAction SilentlyContinue | Remove-Module -Force
     Import-Module $PathToManifest -Force

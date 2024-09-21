@@ -1,9 +1,26 @@
 {
-    // When enabled, will trim trailing whitespace when you save a file.
+    "editor.tabSize": 4,
+    "editor.formatOnSave": false,
     "files.trimTrailingWhitespace": true,
-    // specifies the location of the explicitly ScriptAnalyzer settings file
+    "yaml.schemas": {
+        "https://squidfunk.github.io/mkdocs-material/schema.json": "mkdocs.yml"
+    },
+    "yaml.customTags": [
+        "!ENV scalar",
+        "!ENV sequence",
+        "!relative scalar",
+        "tag:yaml.org,2002:python/name:material.extensions.emoji.to_svg",
+        "tag:yaml.org,2002:python/name:material.extensions.emoji.twemoji",
+        "tag:yaml.org,2002:python/name:pymdownx.superfences.fence_code_format"
+    ],
+    "powershell.codeFormatting.autoCorrectAliases": true,
+    "powershell.codeFormatting.avoidSemicolonsAsLineTerminators": true,
+    "powershell.codeFormatting.pipelineIndentationStyle": "IncreaseIndentationForFirstPipeline",
+    "powershell.codeFormatting.trimWhitespaceAroundPipe": true,
+    "powershell.codeFormatting.useConstantStrings": true,
+    "powershell.codeFormatting.useCorrectCasing": true,
+    "powershell.codeFormatting.whitespaceBetweenParameters": true,
+    "powershell.codeFormatting.preset": "Stroustrup",
     "powershell.scriptAnalysis.settingsPath": "PSScriptAnalyzerSettings.psd1",
-    // specifies the PowerShell coding style used in this project (https://github.com/PoshCode/PowerShellPracticeAndStyle/issues/81)
-    "powershell.codeFormatting.preset":"Stroustrup"
 }
 
