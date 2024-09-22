@@ -45,8 +45,8 @@ theme:
   # custom_dir: overrides
   features:
     # - navigation.tabs
-    # - navigation.tabs.sticky
-    # - navigation.path
+    - navigation.tabs.sticky
+    - navigation.path
   # favicon:
   # icon:
   #   repo:
@@ -55,26 +55,26 @@ theme:
   # logo:
   # palette:
   #   primary: teal
-  # palette:
-  #   # Palette toggle for light mode
-  #   - media: "(prefers-color-scheme: light)"
-  #     scheme: default
-  #     primary: light blue
-  #     accent: pink
-  #     toggle:
-  #       icon: material/brightness-7
-  #       name: Switch to dark mode
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: light blue
+      accent: pink
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
 
-    # # Palette toggle for dark mode
-    # - media: "(prefers-color-scheme: dark)"
-    #   scheme: slate
-    #   primary: indigo
-    #   accent: pink
-    #   toggle:
-    #     icon: material/brightness-4
-    #     name: Switch to light mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: pink
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
 nav:
-  - Home: index.md
+  - Home: swftr.md
   - Change Log: CHANGELOG.md
   # - Functions:
   #   - Function1: functions/function1.md

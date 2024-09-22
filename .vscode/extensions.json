@@ -4,6 +4,8 @@
     "recommendations": [
         "ms-vscode.PowerShell",
         "ryanluker.vscode-coverage-gutters",
-        "DavidAnson.vscode-markdownlint"
+        "redhat.vscode-yaml",
+        "santacodes.santacodes-region-viewer",
+        "yongwoo.template",
     ]
 }
