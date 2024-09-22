@@ -44,12 +44,12 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: pester-results
-        path: .\src\Artifacts\testOutput
+        path: .\Artifacts\testOutput
         if-no-files-found: warn
     - name: Upload zip module archive build
       uses: actions/upload-artifact@v3
       with:
         name: zip-archive
-        path: .\src\Archive
+        path: .\Archive
         if-no-files-found: warn
 
