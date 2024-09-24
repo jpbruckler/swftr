@@ -170,6 +170,6 @@ class TaskParameterInfo {
 
         $this.IsMandatory = $Parameter.Attributes | Where-Object { $_.TypeName.Name -eq 'Parameter' } |
             ForEach-Object -MemberName NamedArguments |
-            Where-Object { $_.ArgumentName -eq 'Mandatory' }
+            Where-Object { $_.ArgumentName -eq 'Mandatory' -AND $_.Extent -notmatch '\$false' }
     }
 }

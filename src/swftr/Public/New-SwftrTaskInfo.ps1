@@ -89,9 +89,20 @@ function New-SwftrTaskInfo {
 
     process {
         if ($PSCmdlet.ParameterSetName -eq 'Path') {
-            $Path | ForEach-Object {
-                $taskInfo = [TaskInfo]::ParseFile($_)
-                Write-Output $taskInfo
+            foreach ($file in $Path) {
+                if (-not (Test-Path $file)) {
+                    Write-Error "Unable to create TaskInfo from $file"
+                    continue
+                }
+                else {
+                    try {
+                        $taskInfo = [TaskInfo]::ParseFile($file)
+                        Write-Output $taskInfo
+                    }
+                    catch {
+                        Write-Error $_.Exception.Message
+                    }
+                }
             }
         }
         else {
